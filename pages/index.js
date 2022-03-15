@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar"
-import Map from "../components/map"
+import Map from "../components/Map"
 
 const style = {
   wrapper: 'h-screen w-screen flex flex-col',
