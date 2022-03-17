@@ -5,10 +5,7 @@ const style = {
     wrapper: 'flex-1 h-full w-full',
 }
 
-mapboxgl.accessToken = process.env.PUBLIC_MAPBOX_ACCESS_TOKEN
-
-
-
+mapboxgl.accessToken = process.env.MAPBOX_TOKEN
 
 
 const Map = () => {
