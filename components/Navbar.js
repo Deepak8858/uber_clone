@@ -3,7 +3,7 @@ import avatar from '../temp/avatar.jpg'
 import { BsPerson } from 'react-icons/bs'
 
 const style = {
-    wrapper: 'h-16 w-full bg-black text-white flex md:justify-around items-center px-20 fixed ',
+    wrapper: 'h-16 w-full bg-black text-white flex md:justify-around items-center px-60 fixed z-20',
     leftMenu: 'flex gap-3',
     logo: 'text-3xl text-white flex cursor-pointer mr-16',
     menuItem: 'text-lg text-white font-medium flex items-center mx-4 cursor-pointer',
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div className={style.menuItem}>Help</div>
                 <div className={style.menuItem}>Deepak</div>
                 <div className={style.userImageContainer}>
-                    <image className={style.userImage}
+                    <Image className={style.userImage}
                         src={avatar}
                         width={40}
                         height={40} />
