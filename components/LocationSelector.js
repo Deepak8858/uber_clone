@@ -23,9 +23,16 @@ const LocationSelector = () => {
                 {inFocus === 'from' ? 'Where can we pick you up' : 'Where to'}
 
             </div>
-        </div>
+            <div className={style.inputBoxes}>
+                <div
+                    className={`${style.inputBox} ${inFocus === 'from' && style.focusedInputBox
+                        }`}
+                ></div>
+            </div>
+          </div>  
+            
     )
 }
 
 
-export default LocationSelector
+            export default LocationSelector
