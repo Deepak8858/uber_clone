@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 import Image from "next/image"
 import ethLogo from '../assets/eth-logo.png'
 import uberX from '../assets/rides/uberX.png'
@@ -65,9 +65,9 @@ const RideSelctor = () => {
         <div className={style.title}>Choose a ride, or swipe up for more</div>
         <div className={style.carList}>
             {carList.map((car, index) => (
-                // eslint-disable-next-line react/jsx-key
+
                 <div className={style.car}>
-                    <Image sr={car.iconUrl} className={style.carImage} height={50} width={50}/>
+                    <Image src={car.iconUrl} alt={post.images[0] }className={style.carImage} height={50} width={50} />
                     <div className={style.carDetails}>
                         <div className={style.service}>{car.service}</div>
                         <div className={style.time}>5 min away</div>
@@ -79,7 +79,7 @@ const RideSelctor = () => {
                         <div className={style.price}>
                             {((basePrice / 10 ** 5) * car.priceMultiplier).toFixed(5)}
                         </div>
-                        <Image src={ethLogo} height={25} width={40} />
+                        <img src={ethLogo} height={25} width={40} />
                     </div>
                 </div>
             ))}
