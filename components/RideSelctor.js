@@ -2,10 +2,13 @@
 import Image from "next/image"
 import ethLogo from '../assets/eth-logo.png'
 import uberX from '../assets/rides/uberX.png'
-import uberBlack from '../assets/rides/uberblack.png'
-import uberBlackSuv from '../assets/rides/uberblacksuv.png'
-import uberSelect from '../assets/rides/uberselect.png'
-import uberXL from '../assets/rides/uberxl.png'
+import uberBlack from '../assets/rides/uberBlack.png'
+import uberBlackSuv from '../assets/rides/uberBlacksuv.png'
+import uberSelect from '../assets/rides/uberSelect.png'
+import uberXL from '../assets/rides/uberXL.png'
+
+
+
 
 
 
@@ -24,36 +27,37 @@ const style = {
     price: `mr-[-0.8rem]`,
 }
 
+
 const carList = [
     {
         service: 'UberX',
-        Image: uberX,
+        iconUrl: uberX,
         priceMultiplier: 1,
 
     },
     {
         service: 'UberBlack',
-        Image: uberBlack,
+        iconUrl: uberBlack,
         priceMultiplier: 1.5,
     },
     {
         name: 'UberBlackSuv',
-        Image: uberBlackSuv,
+        iconUrl: uberBlackSuv,
         priceMultiplier: 1.5,
     },
     {
         service: 'UberSelect',
-        Image: uberSelect,
+        iconUrl: uberSelect,
         priceMultiplier: 1.5,
     },
     {
         service: 'UberXL',
-        Image: uberXL,
+        iconUrl: uberXL,
         priceMultiplier: 1.5,
     },
     {
         service: 'UberBlackSuv',
-        Image: uberBlackSuv,
+        iconUrl: uberBlackSuv,
         priceMultiplier: 1.5,
     },
 ]
@@ -66,8 +70,10 @@ const RideSelctor = () => {
         <div className={style.carList}>
             {carList.map((car, index) => (
 
+
+                // eslint-disable-next-line react/jsx-key
                 <div className={style.car}>
-                    <Image src={car.iconUrl} alt={post.images[0] }className={style.carImage} height={50} width={50} />
+                    <Image src={car.iconUrl} className={style.carImage} height={50} width={50}/>
                     <div className={style.carDetails}>
                         <div className={style.service}>{car.service}</div>
                         <div className={style.time}>5 min away</div>
@@ -79,7 +85,7 @@ const RideSelctor = () => {
                         <div className={style.price}>
                             {((basePrice / 10 ** 5) * car.priceMultiplier).toFixed(5)}
                         </div>
-                        <img src={ethLogo} height={25} width={40} />
+                        <Image src={ethLogo} height={25} width={40} />
                     </div>
                 </div>
             ))}
